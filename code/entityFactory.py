@@ -1,5 +1,6 @@
 from code.background import background
-from code.const import WIN_WIDH
+from code.const import WIN_WIDH, WIN_HEIGHT
+from code.player import player
 
 
 class entityFactory:
@@ -14,5 +15,7 @@ class entityFactory:
                     listBg.append(background(f'Level1Bg{i}',(0,0)))
                     listBg.append(background(f'Level1Bg{i}', (WIN_WIDH, 0)))
                 return listBg
+            case 'Player1':
+                return player('Player1',(10, (WIN_HEIGHT/2)))
 
 
